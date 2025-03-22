@@ -6,7 +6,7 @@
 /*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 20:36:40 by mstrauss          #+#    #+#             */
-/*   Updated: 2024/12/16 20:45:43 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/03/22 14:23:44 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #define SCALARCONVERTER_HPP
 
 #include <string>
+#include <iostream>
 
 class ScalarConverter
 {
