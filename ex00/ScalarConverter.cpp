@@ -6,21 +6,47 @@
 /*   By: mstrauss <mstrauss@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:34:53 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/17 16:52:32 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:11:26 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
 // use errno?
+void printImpossible()
+{
+    std::cout << "char: impossible" << std::endl;
+    std::cout << "int: impossible" << std::endl;
+    std::cout << "float: impossible" << std::endl;
+    std::cout << "double: impossible" << std::endl;
+}
+
+bool isSpecial(const std::string &str)
+{
+    bool isSpecial = false;
+
+    if (str == "+inf" || str == "inf" || str == "+inff" || str == "inff")
+    {
+    }
+    else if (str == "-inf" || str == "-inff")
+    {
+    }
+    else if (str == "nan" || str == "nanf")
+    {
+    }
+    else
+    {
+        isSpecial = false;
+    }
+}
 
 void ScalarConverter::convert(const std::string &str)
 {
-    // check if empty str
     if (str.empty())
     {
-        // print impossible?
-        return 1;
+        std::cout << "Empty input!" << std::endl;
+        printImpossible();
+        return;
     }
 
     if (ifSpecial(str))
@@ -39,5 +65,7 @@ void ScalarConverter::convert(const std::string &str)
     // else handle Character
 
     // else ERROR
+    else
+        printImpossible();
     return 0;
 }
