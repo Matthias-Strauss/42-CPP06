@@ -6,7 +6,7 @@
 /*   By: mstrauss <mstrauss@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:34:54 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/17 16:41:33 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:40:43 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 #include <cmath>
 #include <iomanip>
 #include <cctype>
+
+bool isSpecial(const std::string &str);
+void printImpossible();
 
 class ScalarConverter
 {
